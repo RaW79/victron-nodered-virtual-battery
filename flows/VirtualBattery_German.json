@@ -1,0 +1,1855 @@
+[
+    {
+        "id": "e4f5e8533ac57fae",
+        "type": "tab",
+        "label": "virt.Battery",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "74865b0d3f2d0e53",
+        "type": "group",
+        "z": "e4f5e8533ac57fae",
+        "name": "🔋 JK-BMS Info & Limits → virt.Battery (100)",
+        "style": {
+            "label": true,
+            "color": "#1f3d4d",
+            "fill": "#eaf0f6",
+            "stroke": "#4a78a6"
+        },
+        "nodes": [
+            "bbac815133101130",
+            "330b3dd02d149fee",
+            "c39293aff561618f",
+            "ea69b020b3dfdb0c",
+            "b4929a996494dae6",
+            "8f7f1a3c71e4848b",
+            "7c87209df862aa2b",
+            "7c758f759e80f88b",
+            "241b06873a4154d9",
+            "3eeca897035a290f",
+            "1e3a4f3dc80cd059",
+            "314b90ce8ad16f20",
+            "2b6e8061068fa3c5"
+        ],
+        "x": 114,
+        "y": 839,
+        "w": 1492,
+        "h": 362
+    },
+    {
+        "id": "6f6167f2f0bd785f",
+        "type": "group",
+        "z": "e4f5e8533ac57fae",
+        "name": "🔋 Battery Main – Current Sum & Voltage Logic & Power → virt.Battery (100)",
+        "style": {
+            "label": true,
+            "color": "#1f3d4d",
+            "fill": "#fde8e8",
+            "stroke": "#c45a5a"
+        },
+        "nodes": [
+            "282ed4d5f27d9eec",
+            "ec818bf4e56e27f7",
+            "47951c6b4280409e",
+            "701e8b7a3dac32f3",
+            "d6437798bb99bfcc",
+            "bb19cea47aecb16f",
+            "6628cac2db3ee46b",
+            "c739339f830ec4c5",
+            "de0f2c7919862398",
+            "bedf1de452e409cd",
+            "8fb48c415aeb3a4f",
+            "1057b48f5b0eff0c",
+            "06cb0acbed973240",
+            "bc144b08a14f9a45",
+            "ef96d10044c48c59"
+        ],
+        "x": 114,
+        "y": 399,
+        "w": 1492,
+        "h": 422
+    },
+    {
+        "id": "a06f33b55241fa19",
+        "type": "group",
+        "z": "e4f5e8533ac57fae",
+        "name": "📊 SOC – Durchschnitt aus 3 Shunts → virt.Battery (100)",
+        "style": {
+            "label": true,
+            "color": "#1f3d4d",
+            "fill": "#fff7e6",
+            "stroke": "#d4a04a"
+        },
+        "nodes": [
+            "ed36bd5490506aee",
+            "2390ef030a02cb27",
+            "296a3b80b9189ba7",
+            "195c0302b3734456",
+            "2413da89a58b8ef3",
+            "b62879d6a1187d05",
+            "fe128154c67faeb7",
+            "3edea8fa8037a299",
+            "1055086fe3fa7796",
+            "4679a237121f6e09",
+            "7721d52a6729ca3b"
+        ],
+        "x": 114,
+        "y": 179,
+        "w": 1492,
+        "h": 202
+    },
+    {
+        "id": "g_alarms",
+        "type": "group",
+        "z": "e4f5e8533ac57fae",
+        "name": "🚨 JK-BMS Alarme → virt.Battery (100)",
+        "style": {
+            "label": true,
+            "color": "#1f3d4d",
+            "fill": "#fce8e8",
+            "stroke": "#a04a4a"
+        },
+        "nodes": [
+            "e4ce066e649152e1",
+            "592ed5eee17ffaa3",
+            "dff408eb3e266f38",
+            "f8d4dc94584d73b8",
+            "46bb630cdf87761c",
+            "27f709c3b4578599",
+            "1cbcb2b9537b9f50",
+            "live_alarm_aggregator",
+            "live_alarm_heartbeat",
+            "live_alarm_emit",
+            "set_path_cellimb",
+            "set_path_highdisch",
+            "set_path_highcharge",
+            "set_path_hightemp",
+            "set_path_lowtemp",
+            "set_path_lowvolt",
+            "set_path_internal"
+        ],
+        "x": 114,
+        "y": 1379,
+        "w": 1492,
+        "h": 442
+    },
+    {
+        "id": "g_sink_bat",
+        "type": "group",
+        "z": "e4f5e8533ac57fae",
+        "name": "📡 Virtuelles DBus-Gerät – virt.Battery (100)",
+        "style": {
+            "label": true,
+            "color": "#1f3d4d",
+            "fill": "#eaf0f6",
+            "stroke": "#4a78a6"
+        },
+        "nodes": [
+            "85777564eba91aa0"
+        ],
+        "x": 2074,
+        "y": 899,
+        "w": 285,
+        "h": 82
+    },
+    {
+        "id": "g_overview_bat",
+        "type": "group",
+        "z": "e4f5e8533ac57fae",
+        "name": "🔋 Virtuelle Aggregat-Batterie (100) – Übersicht",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000",
+            "fill": "#fdf6e3",
+            "stroke": "#657b83"
+        },
+        "nodes": [
+            "overview_comment_bat"
+        ],
+        "x": 114,
+        "y": 59,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "85777564eba91aa0",
+        "type": "victron-virtual",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_sink_bat",
+        "name": "virt.Battery",
+        "outputs": 1,
+        "device": "battery",
+        "default_values": true,
+        "battery_capacity": "942",
+        "include_battery_temperature": true,
+        "grid_nrofphases": 1,
+        "include_motor_temp": false,
+        "include_controller_temp": false,
+        "include_coolant_temp": false,
+        "include_motor_rpm": true,
+        "include_motor_direction": true,
+        "position": 0,
+        "pvinverter_nrofphases": 1,
+        "fluid_type": 0,
+        "include_tank_battery": false,
+        "include_tank_temperature": false,
+        "tank_battery_voltage": 3.3,
+        "tank_capacity": 0.2,
+        "temperature_type": 2,
+        "include_humidity": false,
+        "include_pressure": false,
+        "include_temp_battery": false,
+        "temp_battery_voltage": 3.3,
+        "x": 2170,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4ce066e649152e1",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Alarms/CellImbalance",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Alarms/CellImbalance",
+            "type": "enum",
+            "name": "Cell Imbalance alarm",
+            "enum": {
+                "0": "No alarm",
+                "1": "Warning",
+                "2": "Alarm"
+            }
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 270,
+        "y": 1420,
+        "wires": [
+            [
+                "set_path_cellimb"
+            ]
+        ]
+    },
+    {
+        "id": "592ed5eee17ffaa3",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Alarms/HighDischargeCurrent",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Alarms/HighDischargeCurrent",
+            "type": "enum",
+            "name": "High discharge current alarm",
+            "enum": {
+                "0": "No alarm",
+                "1": "Warning",
+                "2": "Alarm"
+            }
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 290,
+        "y": 1480,
+        "wires": [
+            [
+                "set_path_highdisch"
+            ]
+        ]
+    },
+    {
+        "id": "dff408eb3e266f38",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Alarms/HighChargeCurrent",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Alarms/HighChargeCurrent",
+            "type": "enum",
+            "name": "High charge current alarm",
+            "enum": {
+                "0": "No alarm",
+                "1": "Warning",
+                "2": "Alarm"
+            }
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 280,
+        "y": 1540,
+        "wires": [
+            [
+                "set_path_highcharge"
+            ]
+        ]
+    },
+    {
+        "id": "f8d4dc94584d73b8",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Alarms/HighTemperature",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Alarms/HighTemperature",
+            "type": "enum",
+            "name": "High battery temperature alarm",
+            "enum": {
+                "0": "No alarm",
+                "2": "Alarm"
+            }
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 300,
+        "y": 1600,
+        "wires": [
+            [
+                "set_path_hightemp"
+            ]
+        ]
+    },
+    {
+        "id": "46bb630cdf87761c",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Alarms/LowTemperature",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Alarms/LowTemperature",
+            "type": "enum",
+            "name": "Low battery temperature alarm",
+            "enum": {
+                "0": "No alarm",
+                "2": "Alarm"
+            }
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 300,
+        "y": 1660,
+        "wires": [
+            [
+                "set_path_lowtemp"
+            ]
+        ]
+    },
+    {
+        "id": "27f709c3b4578599",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Alarms/LowVoltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Alarms/LowVoltage",
+            "type": "enum",
+            "name": "Low voltage alarm",
+            "enum": {
+                "0": "No alarm",
+                "2": "Alarm"
+            }
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 260,
+        "y": 1720,
+        "wires": [
+            [
+                "set_path_lowvolt"
+            ]
+        ]
+    },
+    {
+        "id": "1cbcb2b9537b9f50",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Alarms/InternalFailure",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Alarms/InternalFailure",
+            "type": "enum",
+            "name": "Internal failure",
+            "enum": {
+                "0": "No alarm",
+                "1": "Warning",
+                "2": "Alarm"
+            }
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 250,
+        "y": 1780,
+        "wires": [
+            [
+                "set_path_internal"
+            ]
+        ]
+    },
+    {
+        "id": "live_alarm_aggregator",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "Alarm Aggregator",
+        "func": "// ============================================================\n//   Alarm Aggregator (LIVE)\n// ------------------------------------------------------------\n//   Sammelt eingehende Alarm-Werte in flow.alarm_snapshot.\n//   Bei echtem Wertwechsel sofortiger Force-Flush.\n//   Identische Werte gehen erst beim nächsten Heartbeat raus.\n// ============================================================\n\nlet path = msg.path;\nif (!path) {\n    node.warn(\"Alarm Aggregator: msg.path missing\");\n    return null;\n}\n\nlet val = msg.payload;\nif (val === null || val === undefined) return null;\n\nlet snapshot = flow.get(\"alarm_snapshot\") || {};\nlet lastSent = flow.get(\"alarm_last_sent\") || {};\n\nsnapshot[path] = val;\nflow.set(\"alarm_snapshot\", snapshot);\n\nlet previous = lastSent[path];\nif (previous !== val) {\n    node.status({\n        fill: val > 0 ? \"red\" : \"green\",\n        shape: \"dot\",\n        text: `FLUSH ${path}: ${previous} → ${val}`\n    });\n    return { payload: \"force_flush\", trigger: \"change\" };\n}\n\nnode.status({\n    fill: \"grey\",\n    shape: \"dot\",\n    text: `${path}=${val} (no change)`\n});\nreturn null;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 990,
+        "y": 1600,
+        "wires": [
+            [
+                "live_alarm_emit"
+            ]
+        ]
+    },
+    {
+        "id": "live_alarm_heartbeat",
+        "type": "inject",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "Heartbeat 60s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "trigger",
+                "v": "heartbeat",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "heartbeat",
+        "payloadType": "str",
+        "x": 1000,
+        "y": 1760,
+        "wires": [
+            [
+                "live_alarm_emit"
+            ]
+        ]
+    },
+    {
+        "id": "live_alarm_emit",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "Alarm Emit",
+        "func": "// ============================================================\n//   Alarm Emit (LIVE)\n// ------------------------------------------------------------\n//   Baut Multi-Value-Payload aus flow.alarm_snapshot und\n//   schickt es an den bestehenden victron-virtual Node.\n// ============================================================\n\nlet snapshot = flow.get(\"alarm_snapshot\") || {};\n\nif (Object.keys(snapshot).length === 0) {\n    node.status({ fill: \"grey\", shape: \"ring\", text: \"snapshot empty\" });\n    return null;\n}\n\nlet payload = Object.assign({}, snapshot);\nflow.set(\"alarm_last_sent\", Object.assign({}, snapshot));\n\nlet trigger = msg.trigger || \"unknown\";\nlet activeCount = Object.values(payload).filter(v => v > 0).length;\nlet totalCount = Object.keys(payload).length;\n\nnode.status({\n    fill: activeCount > 0 ? \"red\" : \"green\",\n    shape: \"dot\",\n    text: `${trigger} | ${activeCount}/${totalCount} active | ${new Date().toLocaleTimeString()}`\n});\n\nreturn { payload: payload };\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1510,
+        "y": 1600,
+        "wires": [
+            [
+                "85777564eba91aa0"
+            ]
+        ]
+    },
+    {
+        "id": "set_path_cellimb",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "set path CellImbalance",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Alarms/CellImbalance",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1420,
+        "wires": [
+            [
+                "live_alarm_aggregator"
+            ]
+        ]
+    },
+    {
+        "id": "set_path_highdisch",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "set path HighDischargeCurrent",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Alarms/HighDischargeCurrent",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1480,
+        "wires": [
+            [
+                "live_alarm_aggregator"
+            ]
+        ]
+    },
+    {
+        "id": "set_path_highcharge",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "set path HighChargeCurrent",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Alarms/HighChargeCurrent",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1540,
+        "wires": [
+            [
+                "live_alarm_aggregator"
+            ]
+        ]
+    },
+    {
+        "id": "set_path_hightemp",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "set path HighTemperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Alarms/HighTemperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1600,
+        "wires": [
+            [
+                "live_alarm_aggregator"
+            ]
+        ]
+    },
+    {
+        "id": "set_path_lowtemp",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "set path LowTemperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Alarms/LowTemperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1660,
+        "wires": [
+            [
+                "live_alarm_aggregator"
+            ]
+        ]
+    },
+    {
+        "id": "set_path_lowvolt",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "set path LowVoltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Alarms/LowVoltage",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 1720,
+        "wires": [
+            [
+                "live_alarm_aggregator"
+            ]
+        ]
+    },
+    {
+        "id": "set_path_internal",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_alarms",
+        "name": "set path InternalFailure",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Alarms/InternalFailure",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1780,
+        "wires": [
+            [
+                "live_alarm_aggregator"
+            ]
+        ]
+    },
+    {
+        "id": "bbac815133101130",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Dc/0/Temperature",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Dc/0/Temperature",
+            "type": "float",
+            "name": "Battery temperature (°C)"
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "1",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 280,
+        "y": 880,
+        "wires": [
+            [
+                "8f7f1a3c71e4848b"
+            ]
+        ]
+    },
+    {
+        "id": "330b3dd02d149fee",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Info/MaxChargeCurrent",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Info/MaxChargeCurrent",
+            "type": "float",
+            "name": "CCL - Charge Current Limit (A)"
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "0",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 300,
+        "y": 940,
+        "wires": [
+            [
+                "7c87209df862aa2b"
+            ]
+        ]
+    },
+    {
+        "id": "c39293aff561618f",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Info/MaxDischargeCurrent",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Info/MaxDischargeCurrent",
+            "type": "float",
+            "name": "DCL - Discharge Current Limit (A)"
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "0",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 310,
+        "y": 1000,
+        "wires": [
+            [
+                "7c758f759e80f88b"
+            ]
+        ]
+    },
+    {
+        "id": "ea69b020b3dfdb0c",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "service": "com.victronenergy.battery/512",
+        "path": "/Info/MaxChargeVoltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Info/MaxChargeVoltage",
+            "type": "float",
+            "name": "CVL - Charge Voltage Limit (V)"
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 300,
+        "y": 1060,
+        "wires": [
+            [
+                "241b06873a4154d9"
+            ]
+        ]
+    },
+    {
+        "id": "b4929a996494dae6",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "service": "com.victronenergy.battery/512",
+        "path": "/System/MinCellVoltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/512",
+            "name": "JK-BMS",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/System/MinCellVoltage",
+            "type": "float",
+            "name": "System; minimum cell voltage (V DC)"
+        },
+        "name": "",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 320,
+        "y": 1120,
+        "wires": [
+            [
+                "3eeca897035a290f"
+            ]
+        ]
+    },
+    {
+        "id": "8f7f1a3c71e4848b",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "name": "set path Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Dc/0/Temperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 880,
+        "wires": [
+            [
+                "1e3a4f3dc80cd059"
+            ]
+        ]
+    },
+    {
+        "id": "7c87209df862aa2b",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "name": "set path MaxChargeCurrent",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Info/MaxChargeCurrent",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 940,
+        "wires": [
+            [
+                "1e3a4f3dc80cd059"
+            ]
+        ]
+    },
+    {
+        "id": "7c758f759e80f88b",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "name": "set path MaxDischargeCurrent",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Info/MaxDischargeCurrent",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1000,
+        "wires": [
+            [
+                "1e3a4f3dc80cd059"
+            ]
+        ]
+    },
+    {
+        "id": "241b06873a4154d9",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "name": "set path MaxChargeVoltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Info/MaxChargeVoltage",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1060,
+        "wires": [
+            [
+                "1e3a4f3dc80cd059"
+            ]
+        ]
+    },
+    {
+        "id": "3eeca897035a290f",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "name": "set path MinCellVoltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/System/MinCellVoltage",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 1120,
+        "wires": [
+            [
+                "1e3a4f3dc80cd059"
+            ]
+        ]
+    },
+    {
+        "id": "1e3a4f3dc80cd059",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "name": "BMS Info Aggregator",
+        "func": "// ============================================================\n//   BMS Info Aggregator (LIVE)\n// ------------------------------------------------------------\n//   Sammelt JK-BMS Info-Werte (Temp, CCL, DCL, CVL, MinCellV)\n//   in flow.bms_info_snapshot.\n//   Bei echtem Wertwechsel sofortiger Force-Flush.\n//   Identische Werte gehen erst beim nächsten Heartbeat raus.\n// ============================================================\n\nlet path = msg.path;\nif (!path) {\n    node.warn(\"BMS Info Aggregator: msg.path missing\");\n    return null;\n}\n\nlet val = msg.payload;\nif (val === null || val === undefined) return null;\n\nlet snapshot = flow.get(\"bms_info_snapshot\") || {};\nlet lastSent = flow.get(\"bms_info_last_sent\") || {};\n\nsnapshot[path] = val;\nflow.set(\"bms_info_snapshot\", snapshot);\n\nlet previous = lastSent[path];\nif (previous !== val) {\n    node.status({\n        fill: \"yellow\",\n        shape: \"dot\",\n        text: `FLUSH ${path}: ${previous} → ${val}`\n    });\n    return { payload: \"force_flush\", trigger: \"change\" };\n}\n\nnode.status({\n    fill: \"grey\",\n    shape: \"dot\",\n    text: `${path}=${val} (no change)`\n});\nreturn null;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1000,
+        "y": 1000,
+        "wires": [
+            [
+                "314b90ce8ad16f20"
+            ]
+        ]
+    },
+    {
+        "id": "2b6e8061068fa3c5",
+        "type": "inject",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "name": "Heartbeat 30s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "trigger",
+                "v": "heartbeat",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "heartbeat",
+        "payloadType": "str",
+        "x": 1020,
+        "y": 1160,
+        "wires": [
+            [
+                "314b90ce8ad16f20"
+            ]
+        ]
+    },
+    {
+        "id": "314b90ce8ad16f20",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "74865b0d3f2d0e53",
+        "name": "BMS Info Emit",
+        "func": "// ============================================================\n//   BMS Info Emit (LIVE)\n// ------------------------------------------------------------\n//   Baut Multi-Value-Payload aus flow.bms_info_snapshot und\n//   schickt es an den bestehenden victron-virtual Node.\n// ============================================================\n\nlet snapshot = flow.get(\"bms_info_snapshot\") || {};\n\nif (Object.keys(snapshot).length === 0) {\n    node.status({ fill: \"grey\", shape: \"ring\", text: \"snapshot empty\" });\n    return null;\n}\n\nlet payload = Object.assign({}, snapshot);\nflow.set(\"bms_info_last_sent\", Object.assign({}, snapshot));\n\nlet trigger = msg.trigger || \"unknown\";\nlet totalCount = Object.keys(payload).length;\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${trigger} | ${totalCount} fields | ${new Date().toLocaleTimeString()}`\n});\n\nreturn { payload: payload };\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1500,
+        "y": 1060,
+        "wires": [
+            [
+                "85777564eba91aa0"
+            ]
+        ]
+    },
+    {
+        "id": "282ed4d5f27d9eec",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "service": "com.victronenergy.battery/288",
+        "path": "/Dc/0/Current",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/288",
+            "name": "YiXiang #1",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Dc/0/Current",
+            "type": "float",
+            "name": "Battery current (A)"
+        },
+        "name": "Current Shunt #1",
+        "onlyChanges": true,
+        "roundValues": "1",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 220,
+        "y": 440,
+        "wires": [
+            [
+                "6628cac2db3ee46b"
+            ]
+        ]
+    },
+    {
+        "id": "ec818bf4e56e27f7",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "service": "com.victronenergy.battery/274",
+        "path": "/Dc/0/Current",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/274",
+            "name": "YiXiang #2",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Dc/0/Current",
+            "type": "float",
+            "name": "Battery current (A)"
+        },
+        "name": "Current Shunt #2",
+        "onlyChanges": true,
+        "roundValues": "1",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "6628cac2db3ee46b"
+            ]
+        ]
+    },
+    {
+        "id": "47951c6b4280409e",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "service": "com.victronenergy.battery/290",
+        "path": "/Dc/0/Current",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/290",
+            "name": "YiXiang #3",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Dc/0/Current",
+            "type": "float",
+            "name": "Battery current (A)"
+        },
+        "name": "Current Shunt #3",
+        "onlyChanges": true,
+        "roundValues": "1",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 220,
+        "y": 560,
+        "wires": [
+            [
+                "6628cac2db3ee46b"
+            ]
+        ]
+    },
+    {
+        "id": "701e8b7a3dac32f3",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "service": "com.victronenergy.battery/288",
+        "path": "/Dc/0/Voltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/288",
+            "name": "YiXiang #1",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Dc/0/Voltage",
+            "type": "float",
+            "name": "Battery voltage (V)"
+        },
+        "name": "Voltage Shunt #1",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 220,
+        "y": 660,
+        "wires": [
+            [
+                "c739339f830ec4c5"
+            ]
+        ]
+    },
+    {
+        "id": "d6437798bb99bfcc",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "service": "com.victronenergy.battery/274",
+        "path": "/Dc/0/Voltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/274",
+            "name": "YiXiang #2",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Dc/0/Voltage",
+            "type": "float",
+            "name": "Battery voltage (V)"
+        },
+        "name": "Voltage Shunt #2",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 220,
+        "y": 720,
+        "wires": [
+            [
+                "c739339f830ec4c5"
+            ]
+        ]
+    },
+    {
+        "id": "bb19cea47aecb16f",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "service": "com.victronenergy.battery/290",
+        "path": "/Dc/0/Voltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/290",
+            "name": "YiXiang #3",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Dc/0/Voltage",
+            "type": "float",
+            "name": "Battery voltage (V)"
+        },
+        "name": "Voltage Shunt #3",
+        "onlyChanges": true,
+        "roundValues": "2",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 220,
+        "y": 780,
+        "wires": [
+            [
+                "c739339f830ec4c5"
+            ]
+        ]
+    },
+    {
+        "id": "6628cac2db3ee46b",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "name": "Current Sum (3 shunts)",
+        "func": "// ============================================================\n//   Current Sum\n// ------------------------------------------------------------\n//   Summiert die Ströme aller 3 Shunts.\n//   Schreibt das Ergebnis in flow.virt_current und schickt\n//   eine Message mit msg.path = '/Dc/0/Current' an den\n//   Aggregator.\n// ============================================================\n\nif (!msg.topic) {\n    node.warn(\"No topic set!\");\n    return null;\n}\n\nlet current = context.get(\"current\") || {};\ncurrent[msg.topic] = Number(msg.payload);\ncontext.set(\"current\", current);\n\n// Summe bilden\nlet sum = 0;\nfor (let key in current) {\n    if (!isNaN(current[key])) {\n        sum += current[key];\n    }\n}\n\n// Auf 1 Nachkommastelle runden\nsum = Math.round(sum * 10) / 10;\n\n// im Flow-Context für Power-Berechnung\nflow.set(\"virt_current\", sum);\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `Σ = ${sum.toFixed(1)} A`\n});\n\nreturn { payload: sum };\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 500,
+        "wires": [
+            [
+                "bedf1de452e409cd",
+                "de0f2c7919862398"
+            ]
+        ]
+    },
+    {
+        "id": "c739339f830ec4c5",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "name": "Voltage Logic (load/idle/discharge)",
+        "func": "// ============================================================\n//   Voltage Logic\n// ------------------------------------------------------------\n//   Wählt aus den 3 Shunt-Spannungen je nach Stromrichtung:\n//     • Laden  (I > +5 A)  → höchste Spannung (worst-case)\n//     • Entladen (I < -5 A) → niedrigste Spannung (worst-case)\n//     • Idle  (|I| ≤ 5 A)   → Mittelwert\n//\n//   Schreibt das Ergebnis in flow.virt_voltage und schickt\n//   eine Message mit msg.path = '/Dc/0/Voltage' an den\n//   Aggregator.\n// ============================================================\n\n// eindeutige ID pro Shunt\nlet id = msg.service + msg.path;\n\nlet volt = context.get(\"volt\") || {};\nvolt[id] = Number(msg.payload);\ncontext.set(\"volt\", volt);\n\nlet values = Object.values(volt).filter(v => !isNaN(v));\nif (values.length === 0) return null;\n\n// aktueller Strom (kann undefined sein, wenn noch nicht da)\nlet current = flow.get(\"virt_current\");\nlet voltage;\nlet mode;\nconst THRESHOLD = 5; // Ampere Deadzone\n\nif (typeof current === \"number\") {\n    if (current > THRESHOLD) {\n        voltage = Math.max(...values);\n        mode = \"charge ↑\";\n    } else if (current < -THRESHOLD) {\n        voltage = Math.min(...values);\n        mode = \"discharge ↓\";\n    } else {\n        voltage = values.reduce((a,b)=>a+b,0) / values.length;\n        mode = \"idle ø\";\n    }\n} else {\n    voltage = values.reduce((a,b)=>a+b,0) / values.length;\n    mode = \"init ø\";\n}\n\n// Optional: Offset für BMS-Abgleich\nconst OFFSET = 0.00;\nvoltage = voltage + OFFSET;\nvoltage = Math.round(voltage * 100) / 100;\n\nflow.set(\"virt_voltage\", voltage);\nflow.set(\"virt_voltage_ts\", Date.now());\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${mode} | ${voltage.toFixed(2)} V`\n});\n\nreturn { payload: voltage };\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 720,
+        "wires": [
+            [
+                "8fb48c415aeb3a4f",
+                "de0f2c7919862398"
+            ]
+        ]
+    },
+    {
+        "id": "de0f2c7919862398",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "name": "Power = V × I",
+        "func": "// ============================================================\n//   Power Calc\n// ------------------------------------------------------------\n//   Liest virt_voltage und virt_current aus dem Flow-Context,\n//   multipliziert sie zur Leistung und schickt sie mit\n//   msg.path = '/Dc/0/Power' an den Aggregator.\n// ============================================================\n\nlet voltage = flow.get(\"virt_voltage\");\nlet current = flow.get(\"virt_current\");\n\nif (voltage === undefined || current === undefined) {\n    node.status({ fill: \"grey\", shape: \"ring\", text: \"waiting for V & I\" });\n    return null;\n}\n\nlet power = Math.round(voltage * current);\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${power} W`\n});\n\nreturn { payload: power };\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 600,
+        "wires": [
+            [
+                "1057b48f5b0eff0c"
+            ]
+        ]
+    },
+    {
+        "id": "bedf1de452e409cd",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "name": "set path /Dc/0/Current",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Dc/0/Current",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 500,
+        "wires": [
+            [
+                "06cb0acbed973240"
+            ]
+        ]
+    },
+    {
+        "id": "8fb48c415aeb3a4f",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "name": "set path /Dc/0/Voltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Dc/0/Voltage",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 720,
+        "wires": [
+            [
+                "06cb0acbed973240"
+            ]
+        ]
+    },
+    {
+        "id": "1057b48f5b0eff0c",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "name": "set path /Dc/0/Power",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Dc/0/Power",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 600,
+        "wires": [
+            [
+                "06cb0acbed973240"
+            ]
+        ]
+    },
+    {
+        "id": "06cb0acbed973240",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "name": "Main Aggregator",
+        "func": "// ============================================================\n//   Battery Main Aggregator (LIVE)\n// ------------------------------------------------------------\n//   Sammelt /Dc/0/Current, /Dc/0/Voltage, /Dc/0/Power in\n//   flow.main_snapshot.\n//   Bei Überschreitung der per-Pfad-Deadband sofortiger Flush.\n//   Sonst gehen identische/kleine Änderungen erst beim\n//   nächsten Heartbeat raus.\n// ============================================================\n\nconst DEADBAND = {\n    \"/Dc/0/Current\":  0.1,    // A\n    \"/Dc/0/Voltage\":  0.01,   // V\n    \"/Dc/0/Power\":    5       // W\n};\n\nlet path = msg.path;\nif (!path) {\n    node.warn(\"Main Aggregator: msg.path missing\");\n    return null;\n}\n\nlet val = msg.payload;\nif (val === null || val === undefined) return null;\n\nlet snapshot = flow.get(\"main_snapshot\") || {};\nlet lastSent = flow.get(\"main_last_sent\") || {};\n\nsnapshot[path] = val;\nflow.set(\"main_snapshot\", snapshot);\n\nlet previous = lastSent[path];\nlet threshold = DEADBAND[path] !== undefined ? DEADBAND[path] : 0;\n\nlet diff = (previous === undefined) ? Infinity : Math.abs(val - previous);\n\nif (diff >= threshold) {\n    node.status({\n        fill: \"yellow\",\n        shape: \"dot\",\n        text: `FLUSH ${path}: ${previous} → ${val} (Δ${diff.toFixed(2)})`\n    });\n    return { payload: \"force_flush\", trigger: \"change\" };\n}\n\nnode.status({\n    fill: \"grey\",\n    shape: \"dot\",\n    text: `${path}=${val} (Δ${diff.toFixed(2)} < ${threshold})`\n});\nreturn null;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1280,
+        "y": 600,
+        "wires": [
+            [
+                "bc144b08a14f9a45"
+            ]
+        ]
+    },
+    {
+        "id": "ef96d10044c48c59",
+        "type": "inject",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "name": "Heartbeat 30s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "trigger",
+                "v": "heartbeat",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "heartbeat",
+        "payloadType": "str",
+        "x": 1280,
+        "y": 740,
+        "wires": [
+            [
+                "bc144b08a14f9a45"
+            ]
+        ]
+    },
+    {
+        "id": "bc144b08a14f9a45",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "6f6167f2f0bd785f",
+        "name": "Main Emit",
+        "func": "// ============================================================\n//   Battery Main Emit\n// ------------------------------------------------------------\n//   Baut Multi-Value-Payload aus flow.main_snapshot und\n//   schickt es an den bestehenden victron-virtual Node.\n// ============================================================\n\nlet snapshot = flow.get(\"main_snapshot\") || {};\n\nif (Object.keys(snapshot).length === 0) {\n    node.status({ fill: \"grey\", shape: \"ring\", text: \"snapshot empty\" });\n    return null;\n}\n\nlet payload = Object.assign({}, snapshot);\nflow.set(\"main_last_sent\", Object.assign({}, snapshot));\n\nlet trigger = msg.trigger || \"unknown\";\nlet i = snapshot[\"/Dc/0/Current\"];\nlet u = snapshot[\"/Dc/0/Voltage\"];\nlet p = snapshot[\"/Dc/0/Power\"];\n\nlet statusText = `${trigger} | `;\nif (u !== undefined) statusText += `${u.toFixed(2)}V `;\nif (i !== undefined) statusText += `${i.toFixed(1)}A `;\nif (p !== undefined) statusText += `${p}W`;\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: statusText.trim()\n});\n\nreturn { payload: payload };\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1520,
+        "y": 600,
+        "wires": [
+            [
+                "85777564eba91aa0"
+            ]
+        ]
+    },
+    {
+        "id": "ed36bd5490506aee",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "service": "com.victronenergy.battery/288",
+        "path": "/Soc",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/288",
+            "name": "YiXiang #1",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Soc",
+            "type": "float",
+            "name": "State of charge (%)"
+        },
+        "name": "SOC Shunt #1",
+        "onlyChanges": true,
+        "roundValues": "1",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "195c0302b3734456"
+            ]
+        ]
+    },
+    {
+        "id": "2390ef030a02cb27",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "service": "com.victronenergy.battery/274",
+        "path": "/Soc",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/274",
+            "name": "YiXiang #2",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Soc",
+            "type": "float",
+            "name": "State of charge (%)"
+        },
+        "name": "SOC Shunt #2",
+        "onlyChanges": true,
+        "roundValues": "1",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "2413da89a58b8ef3"
+            ]
+        ]
+    },
+    {
+        "id": "296a3b80b9189ba7",
+        "type": "victron-input-battery",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "service": "com.victronenergy.battery/290",
+        "path": "/Soc",
+        "serviceObj": {
+            "service": "com.victronenergy.battery/290",
+            "name": "YiXiang #3",
+            "communityTag": "battery"
+        },
+        "pathObj": {
+            "path": "/Soc",
+            "type": "float",
+            "name": "State of charge (%)"
+        },
+        "name": "SOC Shunt #3",
+        "onlyChanges": true,
+        "roundValues": "1",
+        "rateLimit": "0.2",
+        "outputs": 1,
+        "conditionalMode": false,
+        "outputTrue": "",
+        "outputFalse": "",
+        "debounce": "",
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "b62879d6a1187d05"
+            ]
+        ]
+    },
+    {
+        "id": "195c0302b3734456",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "name": "Set msg.service Shunt #1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "service",
+                "pt": "msg",
+                "to": "com.victronenergy.battery/288",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "fe128154c67faeb7"
+            ]
+        ]
+    },
+    {
+        "id": "2413da89a58b8ef3",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "name": "Set msg.service Shunt #2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "service",
+                "pt": "msg",
+                "to": "com.victronenergy.battery/274",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 280,
+        "wires": [
+            [
+                "fe128154c67faeb7"
+            ]
+        ]
+    },
+    {
+        "id": "b62879d6a1187d05",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "name": "Set msg.service Shunt #3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "service",
+                "pt": "msg",
+                "to": "com.victronenergy.battery/290",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 340,
+        "wires": [
+            [
+                "fe128154c67faeb7"
+            ]
+        ]
+    },
+    {
+        "id": "fe128154c67faeb7",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "name": "SOC Average (3 shunts, max 60s old)",
+        "func": "// ============================================================\n//   SOC Average (Soft-Min beim Entladen)\n// ------------------------------------------------------------\n//   Sammelt SOC-Werte aller 3 Shunts mit Zeitstempel.\n//   Werte älter als 60 s werden ignoriert (Stale-Detection).\n//\n//   Mode-abhängige Ausgabe:\n//     • Entladen (I < -5 A) → Avg - Spread/2  (Soft-Min)\n//     • Laden    (I >  5 A) → Avg\n//     • Idle    (|I| ≤ 5 A) → Avg\n//\n//   Soft-Min:\n//   Bei kleinem Spread fast identisch zu Avg. Bei großem\n//   Spread wird die Ausgabe konservativer und nähert sich\n//   dem Min. Selbstregulierend, kein manueller Eingriff\n//   am Cerbo-Limit nötig.\n//\n//   Status zeigt Mode + ausgegebenen SOC + Avg + Spread:\n//     • grün  bei Spread ≤ 5 %\n//     • gelb  bei Spread >  5 %  (Stränge driften auseinander)\n//\n//   Schickt msg.path = '/Soc' an den Aggregator.\n// ============================================================\n\nconst BATTERIES = [\n    \"com.victronenergy.battery/288\",\n    \"com.victronenergy.battery/274\",\n    \"com.victronenergy.battery/290\"\n];\nconst STALE_MS          = 600000; // 600 s Stale-Filter\nconst CURRENT_THRESHOLD = 5;     // A Deadzone für Mode-Detection\nconst SPREAD_WARN       = 5;     // % SOC Spread → Status gelb\n\nif (!BATTERIES.includes(msg.service)) {\n    return null;\n}\n\nlet soc = context.get(\"soc\") || {};\nlet now = Date.now();\n\nsoc[msg.service] = {\n    value: Number(msg.payload),\n    time:  now\n};\ncontext.set(\"soc\", soc);\n\n// --- gültige (nicht-stale) Werte sammeln ---------------------\nlet values = [];\nlet activeShunts = 0;\nfor (let id of BATTERIES) {\n    if (soc[id] && (now - soc[id].time) < STALE_MS) {\n        values.push(soc[id].value);\n        activeShunts++;\n    }\n}\n\nif (values.length === 0) {\n    node.status({ fill: \"grey\", shape: \"ring\", text: \"no valid shunts\" });\n    return null;\n}\n\n// --- Statistiken --------------------------------------------\nconst minSoc = Math.min(...values);\nconst maxSoc = Math.max(...values);\nconst avgSoc = values.reduce((a, b) => a + b, 0) / values.length;\nconst spread = maxSoc - minSoc;\n\n// --- Mode-Bestimmung über Strom -----------------------------\nconst currentI = flow.get(\"virt_current\");\nlet socOut;\nlet mode;\n\nif (typeof currentI === \"number\" && currentI < -CURRENT_THRESHOLD) {\n    // Entladen → Soft-Min (Avg minus halber Spread)\n    socOut = avgSoc - (spread / 2);\n    mode   = \"discharge ↓\";\n} else if (typeof currentI === \"number\" && currentI > CURRENT_THRESHOLD) {\n    // Laden → Avg\n    socOut = avgSoc;\n    mode   = \"charge ↑\";\n} else {\n    // Idle (oder Strom noch nicht bekannt) → Avg\n    socOut = avgSoc;\n    mode   = (typeof currentI === \"number\") ? \"idle ø\" : \"init ø\";\n}\n\nsocOut = Math.round(socOut * 10) / 10;\n\n// --- Diagnose-Werte im Flow-Context für Inspektion -----------\nflow.set(\"soc_min\",    Math.round(minSoc * 10) / 10);\nflow.set(\"soc_max\",    Math.round(maxSoc * 10) / 10);\nflow.set(\"soc_avg\",    Math.round(avgSoc * 10) / 10);\nflow.set(\"soc_spread\", Math.round(spread * 10) / 10);\nflow.set(\"soc_out\",    socOut);\nflow.set(\"soc_mode\",   mode);\n\n// --- Statusanzeige -------------------------------------------\nconst statusColor = spread > SPREAD_WARN ? \"yellow\" : \"green\";\nnode.status({\n    fill:  statusColor,\n    shape: \"dot\",\n    text:  `${mode} ${socOut.toFixed(1)}% ` +\n           `(avg ${avgSoc.toFixed(1)}, Δ${spread.toFixed(1)}, ${activeShunts}/3)`\n});\n\nmsg.payload = socOut;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 280,
+        "wires": [
+            [
+                "3edea8fa8037a299"
+            ]
+        ]
+    },
+    {
+        "id": "3edea8fa8037a299",
+        "type": "change",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "name": "set path /Soc",
+        "rules": [
+            {
+                "t": "set",
+                "p": "path",
+                "pt": "msg",
+                "to": "/Soc",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 280,
+        "wires": [
+            [
+                "1055086fe3fa7796"
+            ]
+        ]
+    },
+    {
+        "id": "1055086fe3fa7796",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "name": "SOC Aggregator",
+        "func": "// ============================================================\n//   SOC Aggregator (LIVE)\n// ------------------------------------------------------------\n//   Sammelt den gemittelten SOC in flow.soc_snapshot.\n//   Bei Änderung ≥ Deadband sofortiger Force-Flush.\n//   Sonst Heartbeat alle 60 s.\n// ============================================================\n\nconst DEADBAND = 0.1; // % SOC\n\nlet path = msg.path;\nif (!path) {\n    node.warn(\"SOC Aggregator: msg.path missing\");\n    return null;\n}\n\nlet val = msg.payload;\nif (val === null || val === undefined) return null;\n\nlet snapshot = flow.get(\"soc_snapshot\") || {};\nlet lastSent = flow.get(\"soc_last_sent\") || {};\n\nsnapshot[path] = val;\nflow.set(\"soc_snapshot\", snapshot);\n\nlet previous = lastSent[path];\nlet diff = (previous === undefined) ? Infinity : Math.abs(val - previous);\n\nif (diff >= DEADBAND) {\n    node.status({\n        fill: \"yellow\",\n        shape: \"dot\",\n        text: `FLUSH ${previous} → ${val} (Δ${diff.toFixed(2)})`\n    });\n    return { payload: \"force_flush\", trigger: \"change\" };\n}\n\nnode.status({\n    fill: \"grey\",\n    shape: \"dot\",\n    text: `SOC=${val} (Δ${diff.toFixed(2)} < ${DEADBAND})`\n});\nreturn null;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1240,
+        "y": 220,
+        "wires": [
+            [
+                "4679a237121f6e09"
+            ]
+        ]
+    },
+    {
+        "id": "7721d52a6729ca3b",
+        "type": "inject",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "name": "Heartbeat 60s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "trigger",
+                "v": "heartbeat",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "heartbeat",
+        "payloadType": "str",
+        "x": 1260,
+        "y": 340,
+        "wires": [
+            [
+                "4679a237121f6e09"
+            ]
+        ]
+    },
+    {
+        "id": "4679a237121f6e09",
+        "type": "function",
+        "z": "e4f5e8533ac57fae",
+        "g": "a06f33b55241fa19",
+        "name": "SOC Emit",
+        "func": "// ============================================================\n//   SOC Emit\n// ------------------------------------------------------------\n//   Baut Multi-Value-Payload aus flow.soc_snapshot und\n//   schickt es an den bestehenden victron-virtual Node.\n// ============================================================\n\nlet snapshot = flow.get(\"soc_snapshot\") || {};\n\nif (Object.keys(snapshot).length === 0) {\n    node.status({ fill: \"grey\", shape: \"ring\", text: \"snapshot empty\" });\n    return null;\n}\n\nlet payload = Object.assign({}, snapshot);\nflow.set(\"soc_last_sent\", Object.assign({}, snapshot));\n\nlet trigger = msg.trigger || \"unknown\";\nlet soc = snapshot[\"/Soc\"];\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${trigger} | ${soc !== undefined ? soc.toFixed(1) + ' %' : '-'}`\n});\n\nreturn { payload: payload };\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1520,
+        "y": 320,
+        "wires": [
+            [
+                "85777564eba91aa0"
+            ]
+        ]
+    },
+    {
+        "id": "overview_comment_bat",
+        "type": "comment",
+        "z": "e4f5e8533ac57fae",
+        "g": "g_overview_bat",
+        "name": "virt.Battery (100) – Aggregator-Pipeline aus 3 Shunts + JK-BMS",
+        "info": "## Übersicht\n\nDieser Flow aggregiert die Daten von **3 SmartShunts (YiXiang #1/#2/#3)**\nund dem **JK-BMS** zu einer einzigen virtuellen Batterie\n`com.victronenergy.battery/100`.\n\n### Quellen\n| Quelle | Service | Daten |\n|--------|---------|-------|\n| YiXiang #1 | `/288` | SOC, Voltage, Current |\n| YiXiang #2 | `/274` | SOC, Voltage, Current |\n| YiXiang #3 | `/290` | SOC, Voltage, Current |\n| JK-BMS | `/512` | Temperature, CCL/DCL/CVL, Min/MaxCellVoltage, Min/MaxCellId, Alarme |\n\n### Aggregations-Logik\n| Pfad | Berechnung |\n|------|------------|\n| `/Soc` | Mittelwert über 3 Shunts (Stale-Filter 60 s) |\n| `/Dc/0/Current` | Summe aller 3 Shunts |\n| `/Dc/0/Voltage` | Laden → Max, Entladen → Min, Idle → Mittelwert (Threshold 5 A) |\n| `/Dc/0/Power` | virt_voltage × virt_current |\n| `/Dc/0/Temperature` | direkt vom JK-BMS |\n| `/Info/*` | direkt vom JK-BMS (CCL/DCL/CVL) |\n| `/System/*` | direkt vom JK-BMS (Min/Max Cell V & Id) |\n| `/Alarms/*` | direkt vom JK-BMS |\n\n### Deadbands & Heartbeats\n| Block | Deadband | Heartbeat |\n|-------|----------|-----------|\n| SOC | ≥ 0.1 % | 60 s |\n| Current | ≥ 0.1 A | 30 s |\n| Voltage | ≥ 0.01 V | 30 s |\n| Power | ≥ 5 W | 30 s |\n| BMS Info | bei Wertwechsel | 30 s |\n| Alarme | bei Wertwechsel | 10 s |\n\n### Designziele\n- Minimale DBus-Schreibzugriffe (Aggregator-Pattern überall)\n- Multi-Value-Payloads statt Einzel-Writes\n- Selbstdokumentierende Function-Nodes mit Status-Anzeigen\n- Stale-Detection bei SOC (defekter Shunt fliegt automatisch raus)\n- Heartbeat als Lebenszeichen für jedes virt. Sub-System",
+        "x": 370,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ac652b6546fb2dfe",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@victronenergy/node-red-contrib-victron": "1.6.64"
+        }
+    }
+]
