@@ -35,7 +35,7 @@ This flow addresses that with two complementary patterns:
 |------------|-------------|
 | `/Soc` | Average of 3 shunts (stale filter 600 s); Soft-Min during discharge |
 | `/Dc/0/Current` | Sum of all 3 shunts |
-| `/Dc/0/Voltage` | Charging (I > +5 A) → Max; Discharging (I < −5 A) → Min; Idle → Average |
+| `/Dc/0/Voltage` | ≥ 51.7 V → Max (overcharge protection); < 51.7 V → Min (deep discharge protection); rate limiter max 0.03 V/cycle |
 | `/Dc/0/Power` | `virt_voltage × virt_current` |
 | `/Dc/0/Temperature` | Direct from JK-BMS |
 | `/Info/MaxChargeCurrent` | Direct from JK-BMS (CCL) |
@@ -110,7 +110,7 @@ The `victron-virtual` node is configured with **942 Ah**. Adjust this to match y
 
 ### Voltage offset (optional)
 
-Inside the **Voltage Logic** function node there is a constant `OFFSET = 0.00`. A small correction value can be entered here if your shunts read slightly differently from the BMS.
+Inside the **Voltage Logic** function node, the final rounding line contains `+ 0.00`. Replace `0.00` with a small correction value if your shunts read slightly differently from the BMS.
 
 ---
 
